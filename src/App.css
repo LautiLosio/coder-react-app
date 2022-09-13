@@ -13,6 +13,22 @@
   }
 }
 
+div.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+} 
+
+h1 {
+  color: red;
+}
+
+ul {
+  border: solid 2px blue;
+  border-radius: 1rem;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
