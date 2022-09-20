@@ -1,6 +1,11 @@
-function Saludo () {
+import AgeLabel from "./AgeLabel"
+
+function Saludo ( {name, age} ) {
   return (
-    <h2>Saludos a todos!</h2>
+    <>
+      <h2>Saludos {name}</h2>
+      <AgeLabel age={age}/>
+    </>
   )
 }
 
