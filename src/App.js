@@ -4,11 +4,13 @@ import Saludo from './components/Saludo'
 import BoxForChildren from './components/BoxForChildren';
 import NavBar from './components/NavBar';
 import Clicker from './components/Clicker';
+import ItemList from './components/ItemList';
+import SwapiContainer from './components/SwapiContainer';
 
 function App() {
   return (
     <div className="main">
-      <NavBar/>
+      {/* <NavBar />
       <h1>Hello World</h1>
       <BoxForChildren>
         <p>parrafo con texto</p>
@@ -28,6 +30,10 @@ function App() {
       <Saludo name='Carlos' age={18} />
 
       <Clicker>Haz asdf aqui</Clicker>
+      <ItemList /> */}
+
+      <SwapiContainer />
+
     </div>
   );
 }
