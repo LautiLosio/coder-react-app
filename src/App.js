@@ -1,40 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Saludo from './components/Saludo'
-import BoxForChildren from './components/BoxForChildren';
+import SwapiContainer from './components/SwapiContainer';
+// import logo from './logo.svg';
+// import Saludo from './components/Saludo'
+// import BoxForChildren from './components/BoxForChildren';
 import NavBar from './components/NavBar';
 import Clicker from './components/Clicker';
-import ItemList from './components/ItemList';
-import SwapiContainer from './components/SwapiContainer';
+import InputControl from './components/InputControl';
+import FirebaseComp from './firebase/FirebaseComp';
+// import ItemList from './components/ItemList';
+// import SwapiContainer from './components/SwapiContainer';
 
 function App() {
   return (
-    <div className="main">
-      {/* <NavBar />
-      <h1>Hello World</h1>
-      <BoxForChildren>
-        <p>parrafo con texto</p>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </BoxForChildren>
-      <ul>
-        <li className='green'>elemento 1</li>
-        <li>elemento 2</li>
-        <li>elemento 3</li>
-      </ul>
-      <span>Otra cosa</span>
-      <strong>En negritas</strong>
-      <Saludo></Saludo>
-      <Saludo name='Miguel' age={23} />
-      <Saludo name='Carlos' age={18} />
-
-      <Clicker>Haz asdf aqui</Clicker>
-      <ItemList /> */}
-
-      <SwapiContainer />
-
-    </div>
+    <BrowserRouter>
+    <NavBar/>
+      <Routes>
+        <Route path={'/'} element={<Clicker>Hazme click</Clicker>} />
+        <Route path={'/swapi'} element={<SwapiContainer/>}/>
+        <Route path={'/input'} element={ <InputControl /> } />
+        <Route path={'/firebase'} element={<FirebaseComp/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

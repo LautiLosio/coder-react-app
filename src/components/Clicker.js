@@ -27,7 +27,7 @@ const Clicker = ({ children }) => {
   return (
     <>
     <div className="m-5">{ count }</div>
-    <button className="btn m-5" onClick={handleClick}>{ children }</button>
+    <button className="btn m-5" onClick={handleClick}>{ children } cliker</button>
     </>
   )
 }
